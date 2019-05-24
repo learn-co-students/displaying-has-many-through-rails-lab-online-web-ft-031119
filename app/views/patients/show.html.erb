@@ -1,5 +1,6 @@
 <ul>
 <% @patient.appointments.each do |appointment| %>
+<%binding.pry%>
 	<li><%= appointment.appointment_datetime.to_formatted_s(:long)%></li>
 	<li><%= link_to appointment.doctor.name, doctor_path(appointment.doctor.id) %></li><br>
 <%end%>
