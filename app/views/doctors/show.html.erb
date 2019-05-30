@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @doctor.name %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @doctor.department %>
+</p>
+
+<% @doctor.appointments.each do |appointment| %>
+  <p><%= appointment.appointment_datetime.to_formatted_s(:long_ordinal) %></p>
+  <p><%= link_to appointment.patient.name, patient_path(appointment.patient) %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>
