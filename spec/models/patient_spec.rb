@@ -14,9 +14,9 @@ describe 'Patient' do
     expect(@patient.name).to eq("Russell Wilson")
   end
 
-  it 'has an age' do
-    expect(@patient.age).to eq(27)
-  end
+ # it 'has an age' do
+  #  expect(@patient.age).to eq(27)
+  #end
 
   it 'has many appointments' do
     expect(@patient.appointments).to eq([@appointment1, @appointment2])
